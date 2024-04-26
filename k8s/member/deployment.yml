@@ -4,6 +4,7 @@ metadata:
   namespace: astarion
   name: member
 spec:
+  replicas: 1
   selector:
     matchLabels:
       app: member
@@ -14,7 +15,7 @@ spec:
     spec:
       containers:
         - name: member
-          image: astarion:member
+          image: 982402893832.dkr.ecr.ap-northeast-2.amazonaws.com/astarion-member:0.1
           env:
           - name: PORT
             value: "8081"
